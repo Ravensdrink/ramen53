@@ -21,7 +21,7 @@
         }
 
         body {
-            background: url(img/BG.jpg) center center fixed no-repeat;
+            background: rgba(0, 0, 0, 0.5) url(img/BG.jpg) center center fixed no-repeat;
             -moz-background-size: cover;
             background-size: cover;
             display: flex;
@@ -67,8 +67,8 @@
         }
 
         .fonesize {
-            height: 110vh;
-            width: 110vh;
+            height: 90vh;
+            width: 90vh;
             display: none;
             background-color: rgba(0, 0, 0, 0.404);
             position: fixed;
@@ -115,7 +115,7 @@
             width: 300px;
             margin: 0 3em;
             position: absolute;
-            top: 47vh;
+            top: 54vh;
         }
 
         .calender li {
@@ -217,10 +217,6 @@
             pre {
                 font-size: 0.95em;
             }
-
-            .fonesize {
-                display: flex;
-            }
         }
 
         @media screen and (max-width: 320px) {
@@ -244,8 +240,7 @@
             .logo img {
                 width: 120px;
             }
-
-
+           .fonesize{display: contents;}
         }
 
         @media screen and (max-width: 280px) {
