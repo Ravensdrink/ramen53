@@ -24,6 +24,7 @@
             background-image: url(img/bg.jpg);
             background-repeat: no-repeat;
             background-position-x: center;
+            background-attachment: fixed;
             display: flex;
             color: white;
             font-family: 'Noto Serif TC', 'Varela Round', sans-serif;
@@ -50,6 +51,16 @@
             margin: 5px;
         }
 
+        h3 {
+            letter-spacing: 2.5px;
+            margin-block-start: 0.5em;
+        }
+
+        h5 {
+            letter-spacing: 1px;
+            margin-block-end: 0.5em;
+        }
+
         a:link,
         a:visited {
             color: white;
@@ -72,7 +83,7 @@
             width: 100%;
             background-color: black;
             position: fixed;
-            opacity: 10%;
+            opacity: 20%;
         }
 
         .content {
@@ -102,6 +113,16 @@
         .logo img {
             justify-content: flex-start;
             width: 170px;
+        }
+
+        .menu {
+            border-radius: 10px;
+            position: absolute;
+            left: 37%;
+            top: 15%;
+            padding: 0 20px 5px 20px;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.856);
         }
 
         .calender {
@@ -174,7 +195,7 @@
 
         .footer {
             position: absolute;
-            bottom: 15vh;
+            bottom: 2vh;
         }
 
         @media screen and (max-width: 660px) {
@@ -182,6 +203,7 @@
                 position: absolute;
                 margin: 15vh 0 0 3em;
                 align-items: unset;
+                height: 165vh;
             }
 
             .nav {
@@ -204,7 +226,13 @@
 
             .calender {
                 height: 300px;
-                top: 72vh;
+                top: 75vh;
+            }
+
+            .menu {
+                margin-bottom: 5%;
+                left: 11%;
+                top: 120%;
             }
 
             .footer {
@@ -223,10 +251,12 @@
         @media screen and (max-width: 320px) {
             .content {
                 margin: 15vh 1.5em;
+                height: 190vh;
             }
 
             .calender {
                 margin: 0 1.5em;
+                top:80vh;
             }
 
             .logo {
@@ -241,9 +271,9 @@
             .logo img {
                 width: 120px;
             }
-
-            .fonesize {
-                display: contents;
+            .menu {
+                left: 7%;
+                top: 135%;
             }
         }
 
@@ -257,7 +287,7 @@
             }
 
             .logo {
-                margin: 2em 1em;
+                margin: -2em 1em;
             }
         }
 
@@ -393,12 +423,28 @@
             <li>31</li>
         </ul>
     </div>
+    <div class="menu">
+        <h3>豚骨白湯拉麵　$200</h3>
+        <h5>とんこつ ラーメン　鹹度:★★</h5>
+        <h3 style="color: rgb(253, 135, 135);">赤湯味噌拉麵　$200</h3>
+        <h5 style="color: rgb(253, 135, 135);">辛味噌 ラーメン　鹹度:★★★　微辣!</h5>
+        <h3 style="color: rgb(253, 74, 74);">辛子拉麵　　　$210</h3>
+        <h5 style="color: rgb(253, 74, 74);">辛 ラーメン　鹹度:★★★★　辣!!</h5>
+        <h3>櫻花蝦拉麵　　$230</h3>
+        <h5>周三限定　鹹度:★★</h5>
+        <h3 style="color: rgb(0, 225, 255);">鹽味干貝拉麵　$250</h3>
+        <h5 style="color: rgb(0, 225, 255);">周四五六限定　鹹度:★★</h5>
+        <h3>明太子白飯　　$60</h3>
+        <h5>(加入拉麵湯中食用)</h5>
+        <h3 style="color: rgb(253, 74, 74);">燒鳥　　　　　$38/串</h3>
+        <h5 style="color: rgb(253, 74, 74);">烤雞肉串 辣!!</h5>
+    </div>
     <div class="content">
         <div style="margin-right: 10px;">
             <nav class="nav fade-in two">
                 <a href="https://www.facebook.com/53ramen"><i class="fab fa-facebook-square" style="color: #7dacfd;">
                     </i> FACEBOOK　</a>
-                <a href=""><i class="fas fa-phone" style="color: rgb(255, 74, 74);"></i> 0933 581 872</a>
+                <a href="tel:0933581872"><i class="fas fa-phone" style="color: rgb(255, 74, 74);"></i> 0933 581 872</a>
                 <!-- <a href=""><i class="fab fa-instagram" style="color: #fc7aa5;">
                      <a href=""><i class="fab fa-line" style="color: #05d805;"></i> LINE　</a>
                     </i> INSTAGRAM</a> -->
@@ -411,9 +457,10 @@
         <div class="footer fade-in three">
             <pre>
 公休　周一
-常態　二-五 18:00 ~21:00
-假日　六-日 17:00 ~21:00
-　　　*國定假日連假等,同假日公告
+常態　18:00 ~21:00
+假日　17:00 ~21:00
+　　　*國定假日連假等，同假日公告
+　　　*營業平假日，請參照行事曆
 
 <a href="https://tinyurl.com/ybc7koaw">542 南投縣草屯鎮史館路397巷53號</a></pre>
         </div>
