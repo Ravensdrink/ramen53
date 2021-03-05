@@ -66,12 +66,13 @@
             color: red;
         }
 
-        .fonesize {
-            height: 90vh;
-            width: 90vh;
-            display: none;
-            background-color: rgba(0, 0, 0, 0.404);
+        .bg {
+            display: flex;
+            height: 100%;
+            width: 100%;
+            background-color: black;
             position: fixed;
+            opacity: 10%;
         }
 
         .content {
@@ -92,18 +93,10 @@
 
         .logo {
             height: 100%;
-            margin: 2em 3em;
-        }
-
-        .logobg {
-            height: 20%;
-            width: 237px;
-            margin-top: 10px;
-            position: absolute;
-            background-image: url(img/logobg.png);
-            background-size: contain;
-            background-repeat: no-repeat;
-            opacity: 0.5;
+            margin: -3em 3em 0 3em;
+            padding: 105px 20px 13px 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 24px;
         }
 
         .logo img {
@@ -115,7 +108,7 @@
             width: 300px;
             margin: 0 3em;
             position: absolute;
-            top: 54vh;
+            top: 48vh;
         }
 
         .calender li {
@@ -201,6 +194,14 @@
                 margin: 1em 0;
             }
 
+            .bg {
+                opacity: 30%;
+            }
+
+            .logo {
+                margin-top: -5em;
+            }
+
             .calender {
                 height: 300px;
                 top: 72vh;
@@ -229,7 +230,7 @@
             }
 
             .logo {
-                margin: 2em 1.5em;
+                margin: -5em 1.5em;
             }
 
             .logobg {
@@ -240,7 +241,10 @@
             .logo img {
                 width: 120px;
             }
-           .fonesize{display: contents;}
+
+            .fonesize {
+                display: contents;
+            }
         }
 
         @media screen and (max-width: 280px) {
@@ -257,7 +261,11 @@
             }
         }
 
-        @media screen and (height: 640px) {}
+        @media screen and (height: 640px) {
+            .logo {
+                margin: -5em 1.5em;
+            }
+        }
 
         @-webkit-keyframes fadeIn {
             from {
@@ -327,8 +335,7 @@
 </head>
 
 <body>
-    <div class="fonesize"></div>
-    <div class="logobg"></div>
+    <div class="bg"></div>
     <div class="logo fade-in one"><img src="img/logo.gif" alt="">
     </div>
     <div class="calender fade-in three">
