@@ -124,35 +124,50 @@
             background-color: rgba(0, 0, 0, 0.856);
         }
 
-        .menu-tab {
-            display: flex;
-            justify-content: space-around;
-            align-items: baseline;
+        .tab .tab__title {
+            display: inline-block;
         }
 
-        .menu-tab a {
+        .tab .tab__title a {
+            display: inline-block;
             text-decoration: none;
-            color: rgba(255, 255, 255, 0.5);
+            color: rgb(99, 99, 99);
+            transition: border-color 0.2s;
         }
 
-        .menu-tab a:hover,
-        .menu-tab a:active {
-            color: white;
+        .tab .tab__title a:hover {
+            color: red;
         }
 
-        .menu-content {
+        .tab .tab__content {
             height: 0;
             overflow: hidden;
             opacity: 0;
             transition: opacity 1s, padding-top 1s, padding-bottom 1s;
         }
 
-        #ramen {
-            display: grid;
+        .tab .tab__title:target a{
+            color: white;
         }
 
-        #pizza {
-            display: none;
+        .tab .tab--content-active {
+            height: auto;
+            opacity: 1;
+        }
+
+        .tab .tab__title:target~.tab--title-active a {
+            color: white;
+        }
+
+        .tab .tab__title:target~.tab--content-active {
+            height: 0;
+            opacity: 0;
+        }
+
+        .tab #tab1:target~[data-id=tab1],
+        .tab #tab2:target~[data-id=tab2] {
+            height: auto;
+            opacity: 1;
         }
 
         .calender {
@@ -454,45 +469,49 @@
             <li>31</li>
         </ul>
     </div>
-
     <div class="menu">
-        <div class="menu-tab">
-            <h2 id="tab1"><a href="#ramen">拉麵</a></h2>
-            <h2 id="tab2"><a href="#pizza">披薩</a></h2>
-        </div>
-        <div class="menu-content" id="ramen">
-            <h3>豚骨白湯拉麵　$200</h3>
-            <h5>とんこつ ラーメン　鹹度:★★</h5>
-            <h3 style="color: rgb(253, 135, 135);">赤湯味噌拉麵　$200</h3>
-            <h5 style="color: rgb(253, 135, 135);">辛味噌 ラーメン　鹹度:★★★　微辣!</h5>
-            <h3 style="color: rgb(253, 74, 74);">辛子拉麵　　　$210</h3>
-            <h5 style="color: rgb(253, 74, 74);">辛 ラーメン　鹹度:★★★★　辣!!</h5>
-            <h3>櫻花蝦拉麵　　$230</h3>
-            <h5>周三限定　鹹度:★★</h5>
-            <h3 style="color: rgb(0, 225, 255);">鹽味干貝拉麵　$250</h3>
-            <h5 style="color: rgb(0, 225, 255);">周四五六限定　鹹度:★★</h5>
-            <h3>明太子白飯　　$60</h3>
-            <h5>(加入拉麵湯中食用)</h5>
-            <h3 style="color: rgb(253, 74, 74);">燒鳥　　　　　$38/串</h3>
-            <h5 style="color: rgb(253, 74, 74);">烤雞肉串 辣!!</h5>
-        </div>
-        <div class="menu-" id="pizza">
-            <h3>瑪格莉特　　$250</h3>
-            <h5></h5>
-            <h3>鄉村　　　　$280</h3>
-            <h5></h5>
-            <h3>夏威夷　　　$280</h3>
-            <h5></h5>
-            <h3>燒鳥　　　　$280</h3>
-            <h5></h5>
-            <h3>章魚燒　　　$280</h3>
-            <h5></h5>
-            <h3>橙香燒鳥　　$280</h3>
-            <h5></h5>
-            <h3>海鮮星星餃　$330</h3>
-            <h5></h5>
+        <div class="tab">
+            <div class="tab__title tab--title-active" id="tab1">
+                <h2><a href="#tab1">拉麵</a></h2>
+            </div>
+            <div class="tab__title" id="tab2">
+                <h2><a href="#tab2">披薩</a></h2>
+            </div>
+            <div class="tab__content tab--content-active" data-id="tab1">
+                <h3>豚骨白湯拉麵　$200</h3>
+                <h5>とんこつ ラーメン　鹹度:★★</h5>
+                <h3 style="color: rgb(253, 135, 135);">赤湯味噌拉麵　$200</h3>
+                <h5 style="color: rgb(253, 135, 135);">辛味噌 ラーメン　鹹度:★★★　微辣!</h5>
+                <h3 style="color: rgb(253, 74, 74);">辛子拉麵　　　$210</h3>
+                <h5 style="color: rgb(253, 74, 74);">辛 ラーメン　鹹度:★★★★　辣!!</h5>
+                <h3>櫻花蝦拉麵　　$230</h3>
+                <h5>周三限定　鹹度:★★</h5>
+                <h3 style="color: rgb(0, 225, 255);">鹽味干貝拉麵　$250</h3>
+                <h5 style="color: rgb(0, 225, 255);">周四五六限定　鹹度:★★</h5>
+                <h3>明太子白飯　　$60</h3>
+                <h5>(加入拉麵湯中食用)</h5>
+                <h3 style="color: rgb(253, 74, 74);">燒鳥　　　　　$38/串</h3>
+                <h5 style="color: rgb(253, 74, 74);">烤雞肉串 辣!!</h5>
+            </div>
+            <div class="tab__content" data-id="tab2">
+                <h3>瑪格莉特　　$250</h3>
+                <h5></h5>
+                <h3>鄉村　　　　$280</h3>
+                <h5></h5>
+                <h3>夏威夷　　　$280</h3>
+                <h5></h5>
+                <h3>燒鳥　　　　$280</h3>
+                <h5></h5>
+                <h3>章魚燒　　　$280</h3>
+                <h5></h5>
+                <h3>橙香燒鳥　　$280</h3>
+                <h5></h5>
+                <h3>海鮮星星餃　$330</h3>
+                <h5></h5>
+            </div>
         </div>
     </div>
+
     <div class="content">
         <div style="margin-right: 10px;">
             <nav class="nav fade-in two" id="link">
