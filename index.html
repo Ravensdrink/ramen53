@@ -29,6 +29,7 @@
             background-size: cover;
             display: flex;
             color: white;
+            height: 98vh;
             font-family: 'Noto Serif TC', 'Varela Round', sans-serif;
         }
 
@@ -45,7 +46,7 @@
         }
 
         h1 {
-            font-size: xx-large;
+            font-size: x-large;
             letter-spacing: 1px;
             margin: 2% 0;
             font-weight: 900;
@@ -57,7 +58,7 @@
 
         h3 {
             letter-spacing: 2.5px;
-            margin-block-start: 0.5em;
+            margin-block-start: 0.2em;
         }
 
         h5 {
@@ -92,39 +93,39 @@
         }
 
         .news {
+            display: none;
             padding: 4px 12px;
             width: 270px;
             height: 100px;
             background-color: rgba(255, 36, 36, 0.596);
             border-radius: 12px;
-            font-size: 12px;
+            font-size: 14px;
             letter-spacing: 3px;
             color: white;
         }
 
+        .left {
+            background-color: rgba(0, 0, 0, 0.556);
+            height: 100%;
+            padding: 1vh 3vw;
+        }
+
         .content {
-            position: absolute;
-            right: 5%;
-            bottom: 5%;
+            padding: 0 0 1% 2%;
         }
 
         .logo {
-            position: absolute;
-            top: 3%;
-            left: 5%;
+            margin: 2vh 0;
+
         }
 
         .logo img {
             justify-content: flex-start;
-            width: 170px;
         }
 
         .calender {
-            width: 300px;
-            height: 300px;
-            position: absolute;
-            bottom: 5%;
-            left: 5%;
+            width: 230px;
+            height: 290px;
             font-weight: 700;
         }
 
@@ -154,10 +155,11 @@
         .day-list li {
             font-size: 10px;
             height: 37px;
+            background-color: rgba(255, 221, 111, 0.623);
         }
 
         .day-list li p {
-            font-size: 14px;
+            font-size: 12px;
         }
 
         .day-list li:nth-of-type(7n+1) {
@@ -174,29 +176,26 @@
         }
 
         .day-list li.re {
-            background-color: rgba(0, 225, 255, 0.719);
+            background-color: rgba(0, 225, 255, 0.322);
             color: rgb(0, 0, 0);
         }
 
         .day-list li:nth-of-type(7n+2) {
-            background-color: rgba(0, 225, 255, 0.719);
+            background-color: rgba(0, 225, 255, 0.322);
             color: rgb(0, 0, 0);
         }
 
         .nav {
-            display: flex;
-            position: absolute;
-            right: 5%;
-            top: 5%;
+            margin: 5% 0;
+        }
+
+        .nav a {
+            margin: 5% 0;
         }
 
         .nav p {
-            font-size: 16px;
+            font-size: 12px;
             margin: -4px 14px 0 5px;
-        }
-
-        .footer {
-            padding-left: 22%;
         }
 
         .swiper-container {
@@ -212,6 +211,7 @@
             text-align: center;
             font-size: 18px;
             flex-direction: column;
+            padding: 0 0 0 15px;
 
             /* Center slide text vertically */
             display: -webkit-box;
@@ -225,7 +225,7 @@
             -webkit-box-align: center;
             -ms-flex-align: center;
             -webkit-align-items: center;
-            align-items: center;
+            align-items: flex-start;
         }
 
         @media screen and (max-width: 660px) {
@@ -234,10 +234,8 @@
             }
 
             .rwd-center {
-                width: 660px;
-                height: 660px;
                 margin: auto;
-                padding: 5% 0;
+                padding: 2vh 0;
                 display: grid;
                 justify-content: center;
                 align-items: center;
@@ -250,16 +248,21 @@
                 right: unset;
                 bottom: unset;
                 padding: 2.5% 0;
+                margin: auto;
             }
 
             .logo,
-            .nav {
+            .left {
                 position: unset;
+                background-color: unset;
             }
 
-            .nav-flex {
+            .nav {
+                position: absolute;
                 display: flex;
-                justify-content: space-between;
+                left: 56vw;
+                top: 4vh;
+                margin: 0;
             }
 
             .nav a {
@@ -366,7 +369,7 @@
 <body>
     <div class="bg"></div>
     <div class="rwd-center">
-        <div class="nav-flex">
+        <div class="left">
             <div class="logo fade-in one"><img src="img/logo.gif" alt="">
             </div>
             <nav class="nav fade-in two" id="link">
@@ -378,88 +381,85 @@
                     <p>0933 581 872</p>
                 </a>
                 <!-- <a href=""><i class="fab fa-instagram" style="color: #fc7aa5;">
-             <a href=""><i class="fab fa-line" style="color: #05d805;"></i> LINE　</a>
-            </i> INSTAGRAM</a> -->
+                 <a href=""><i class="fab fa-line" style="color: #05d805;"></i> LINE　</a>
+                </i> INSTAGRAM</a> -->
             </nav>
-        </div>
-        <div class="content">
-            <div class="news fade-in two">
-                <h3>公告</h1>本週物料持續短缺，鹽味干貝拉麵暫停販售！
-                    禮拜四五六限定由 松露蛤蜊拉麵 代班！謝謝！
-            </div>
-            <div class="title fade-in two">
-                <h1>麵五三屋台ラーメン</h1>
-                <h1>柴窯五十三</h1>
-            </div>
-            <div class="footer fade-in three" id="link">
-                <pre>
-公休　周一
-常態　18:00 ~21:00
+            <div class="content">
+                <div class="news fade-in two">
+                    <h3>公告</h1>本週物料持續短缺，鹽味干貝拉麵暫停販售！
+                        禮拜四五六限定由 松露蛤蜊拉麵 代班！謝謝！
+                </div>
+                <div class="title fade-in two">
+                    <h1>麵五三屋台ラーメン</h1>
+                    <h1>柴窯五十三</h1>
+                </div>
+                <div class="footer fade-in three" id="link">
+                    <pre>
+平日　18:00 ~21:00
 假日　17:00 ~21:00
-　　　*國定假日連假等，同假日公告
-　　　*營業平假日，請參照行事曆
-
 <a href="https://tinyurl.com/ybc7koaw">542 南投縣草屯鎮史館路397巷53號</a></pre>
+                </div>
             </div>
-        </div>
-        <div class="calender fade-in three">
-            <div style="display: flex;align-items: baseline;">
-                <h2>參月</h2>
-                <p style="color: rgb(255, 0, 0);margin: 0 4px 0 10px;">█</p> 假日<p
-                    style="color: rgb(0, 225, 255);margin: 0 4px 0 10px;">█</p> 店休
+            <div class="calender fade-in three">
+                <div style="display: flex;align-items: baseline;">
+                    <h2>參月</h2>
+                    <p style="color: rgb(255, 0, 0);margin: 0 4px 0 10px;">█</p> 假日<p
+                        style="color: rgb(255, 221, 111);margin: 0 4px 0 10px;">█</p> 平日
+                </div>
+                <ul class="m-list">
+                    <li>日</li>
+                    <li>一</li>
+                    <li>二</li>
+                    <li>三</li>
+                    <li>四</li>
+                    <li>五</li>
+                    <li>六</li>
+                </ul>
+                <ul class="day-list">
+                    <li></li>
+                    <li id="active">1</li>
+                    <li class="re">2 <p>店休</p>
+                    </li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                    <li>6</li>
+                    <li>7</li>
+                    <li>8 <p>店休</p>
+                    </li>
+                    <li>9</li>
+                    <li>10</li>
+                    <li>11</li>
+                    <li>12</li>
+                    <li>13</li>
+                    <li>14</li>
+                    <li>15 <p>店休</p>
+                    </li>
+                    <li>16</li>
+                    <li>17</li>
+                    <li>18</li>
+                    <li>19</li>
+                    <li>20</li>
+                    <li>21</li>
+                    <li>22 <p>店休</p>
+                    </li>
+                    <li>23</li>
+                    <li>24</li>
+                    <li>25</li>
+                    <li>26</li>
+                    <li>27</li>
+                    <li>28</li>
+                    <li>29 <p>店休</p>
+                    </li>
+                    <li>30</li>
+                    <li>31</li>
+                </ul>
             </div>
-            <ul class="m-list">
-                <li>日</li>
-                <li>一</li>
-                <li>二</li>
-                <li>三</li>
-                <li>四</li>
-                <li>五</li>
-                <li>六</li>
-            </ul>
-            <ul class="day-list">
-                <li></li>
-                <li id="active">1</li>
-                <li class="re">2 <p>店休</p>
-                </li>
-                <li>3</li>
-                <li>4</li>
-                <li>5</li>
-                <li>6</li>
-                <li>7</li>
-                <li>8 <p>店休</p>
-                </li>
-                <li>9</li>
-                <li>10</li>
-                <li>11</li>
-                <li>12</li>
-                <li>13</li>
-                <li>14</li>
-                <li>15 <p>店休</p>
-                </li>
-                <li>16</li>
-                <li>17</li>
-                <li>18</li>
-                <li>19</li>
-                <li>20</li>
-                <li>21</li>
-                <li>22 <p>店休</p>
-                </li>
-                <li>23</li>
-                <li>24</li>
-                <li>25</li>
-                <li>26</li>
-                <li>27</li>
-                <li>28</li>
-                <li>29 <p>店休</p>
-                </li>
-                <li>30</li>
-                <li>31</li>
-            </ul>
         </div>
         <div class="swiper-container fade-in three">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
+                    <h3>拉麵區　（披薩→)</h3>
                     <h3>豚骨白湯拉麵　$200</h3>
                     <h5>とんこつ ラーメン　鹹度:★★</h5>
                     <h3 style="color: rgb(253, 135, 135);">赤湯味噌拉麵　$200</h3>
@@ -476,6 +476,7 @@
                     <h5 style="color: rgb(253, 74, 74);">烤雞肉串 辣!!</h5>
                 </div>
                 <div class="swiper-slide">
+                    <h3>披薩區 (←拉麵)</h3>
                     <h3>瑪格莉特　　$250</h3>
                     <h5></h5>
                     <h3>鄉村　　　　$280</h3>
