@@ -100,6 +100,10 @@
             z-index: -1;
         }
 
+        .rwd-center {
+            display: flex;
+        }
+
         .news {
             display: none;
             padding: 4px 12px;
@@ -195,6 +199,7 @@
 
         .nav {
             margin: 5% 0;
+            font-size: 12px;
         }
 
         .nav a {
@@ -202,25 +207,37 @@
         }
 
         .nav p {
-            font-size: 12px;
             margin: -4px 14px 0 5px;
         }
 
         .swiper-container {
-            display: none;
+            display: flex;
             width: 300px;
-            height: 500px;
+            height: 100%;
             padding: 5% 0;
-            background: rgba(0, 0, 0, 0.556);
-            border-radius: 5%;
+            background: rgba(41, 36, 36, 0.556);
+        }
+
+        .swiper-pagination-bullet {
+            width: 80px;
+            height: min-content;
+            font-size: 24px;
+            background: none;
+        }
+
+        .swiper-container-horizontal>.swiper-pagination-bullets,
+        .swiper-pagination-custom,
+        .swiper-pagination-fraction {
+            bottom: unset;
         }
 
         .swiper-slide {
             text-align: center;
             font-size: 18px;
-            height: 105%;
+            height: 450px;
             flex-direction: column;
-            padding: 0 0 0 15px;
+            padding: 7vh 0 0 5vw;
+
 
             /* Center slide text vertically */
             display: -webkit-box;
@@ -246,8 +263,10 @@
                 margin: auto;
                 padding: 2vh 0;
                 display: grid;
+                width: 300px;
+                height: max-content;
                 justify-content: center;
-                align-items: center;
+
             }
 
             .calender,
@@ -303,23 +322,20 @@
 
             .swiper-container {
                 display: unset;
-            }
-
-            .swiper-pagination-bullet {
-                width: 80px;
-                font-size: 24px;
-            }
-
-            .swiper-container-horizontal>.swiper-pagination-bullets,
-            .swiper-pagination-custom,
-            .swiper-pagination-fraction {
-                bottom: unset;
+                width: 100%;
+                height: auto;
+                padding: 5% 0;
+                background: rgba(41, 36, 36, 0.556);
+                border-radius: 5%;
             }
 
             .swiper-pagination-bullet-active {
                 background: none;
             }
 
+            .swiper-slide-active {
+                height: auto;
+            }
 
         }
 
@@ -495,19 +511,19 @@
             </div>
             <div class="swiper-wrapper">
                 <div class="swiper-slide swiper-slide-activ">
-                    <h3>豚骨白湯拉麵　$200</h3>
+                    <h3>豚骨白湯拉麵　　 $200</h3>
                     <h5>とんこつ ラーメン　鹹度:★★</h5>
-                    <h3 style="color: rgb(253, 135, 135);">赤湯味噌拉麵　$200</h3>
+                    <h3 style="color: rgb(253, 135, 135);">赤湯味噌拉麵　　 $200</h3>
                     <h5 style="color: rgb(253, 135, 135);">辛味噌 ラーメン　鹹度:★★★　微辣!</h5>
-                    <h3 style="color: rgb(253, 74, 74);">辛子拉麵　　　$210</h3>
+                    <h3 style="color: rgb(253, 74, 74);">辛子拉麵　　　　 $210</h3>
                     <h5 style="color: rgb(253, 74, 74);">辛 ラーメン　　鹹度:★★★★　辣!!</h5>
-                    <h3>櫻花蝦拉麵　　$230</h3>
+                    <h3>櫻花蝦拉麵　　　 $230</h3>
                     <h5>周三限定　　　　 　鹹度:★★</h5>
-                    <h3 style="color: rgb(0, 225, 255);">鹽味干貝拉麵　$250</h3>
+                    <h3 style="color: rgb(0, 225, 255);">鹽味干貝拉麵　　 $250</h3>
                     <h5 style="color: rgb(0, 225, 255);">周四五六限定 　　　鹹度:★★</h5>
-                    <h3>明太子白飯　　$60</h3>
+                    <h3>明太子白飯　　　　$60</h3>
                     <h5>(加入拉麵湯中食用)</h5>
-                    <h3 style="color: rgb(253, 74, 74);">燒鳥　　　　　$38/串</h3>
+                    <h3 style="color: rgb(253, 74, 74);">燒鳥　　　　　 $38/串</h3>
                     <h5 style="color: rgb(253, 74, 74);">烤雞肉串　辣!!</h5>
                 </div>
                 <div class="swiper-slide swiper-slide-next">
@@ -537,6 +553,7 @@
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
+                autoHeight: true,
 
                 renderBullet: function (index, className) {
                     switch (index) {
