@@ -30,7 +30,8 @@
             background-size: cover;
             display: flex;
             color: white;
-            height: 98vh;
+            min-height: 100vh;
+            width: 100vw;
             font-family: 'Noto Serif TC', 'Varela Round', sans-serif;
         }
 
@@ -105,21 +106,25 @@
         }
 
         .news {
-            display: none;
-            padding: 4px 12px;
-            width: 270px;
-            height: 100px;
+            display: flex;
+            padding: 10px 14px;
+            max-width: 200px;
+            height: fit-content;
+            flex-direction: column;
             background-color: rgba(255, 36, 36, 0.596);
             border-radius: 12px;
             font-size: 14px;
             letter-spacing: 3px;
             color: white;
+            position: fixed;
+            bottom: 5%;
+            right: 5%;
         }
 
         .left {
             background-color: rgba(0, 0, 0, 0.556);
             height: 100%;
-            padding: 1vh 3vw;
+            padding: 0 5%;
         }
 
         .content {
@@ -127,12 +132,9 @@
         }
 
         .logo {
-            margin: 2vh 0;
-
-        }
-
-        .logo img {
-            justify-content: flex-start;
+            margin: 4vh 0;
+            display: flex;
+            justify-content: center;
         }
 
         .calender {
@@ -200,6 +202,9 @@
         .nav {
             margin: 5% 0;
             font-size: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .nav a {
@@ -212,10 +217,9 @@
 
         .swiper-container {
             display: flex;
-            width: 300px;
-            height: 100%;
-            padding: 5% 0;
             background: rgba(41, 36, 36, 0.556);
+            height: 100%;
+            width: 350px;
         }
 
         .swiper-pagination-bullet {
@@ -229,6 +233,7 @@
         .swiper-pagination-custom,
         .swiper-pagination-fraction {
             bottom: unset;
+            top: 40px;
         }
 
         .swiper-slide {
@@ -236,7 +241,8 @@
             font-size: 18px;
             height: 450px;
             flex-direction: column;
-            padding: 7vh 0 0 5vw;
+            padding: 0 10px;
+            margin: auto;
 
 
             /* Center slide text vertically */
@@ -285,6 +291,11 @@
                 background-color: unset;
             }
 
+            .logo {
+                margin: 2vh 0;
+                display: block;
+            }
+
             .nav {
                 position: absolute;
                 display: flex;
@@ -295,6 +306,7 @@
 
             .news {
                 display: inline-block;
+                position: unset;
             }
 
             .nav a {
@@ -337,13 +349,18 @@
                 height: auto;
             }
 
+            .swiper-slide {
+                padding: 7vh 0 0 4vw;
+                margin: 0;
+            }
+
+            .swiper-container-horizontal>.swiper-pagination-bullets,
+            .swiper-pagination-custom,
+            .swiper-pagination-fraction {
+                bottom: unset;
+                top: unset;
+            }
         }
-
-        @media screen and (max-width: 320px) {}
-
-        @media screen and (max-width: 280px) {}
-
-        @media screen and (height: 640px) {}
 
         @-webkit-keyframes fadeIn {
             from {
@@ -430,6 +447,11 @@
                  <a href=""><i class="fab fa-line" style="color: #05d805;"></i> LINE　</a>
                 </i> INSTAGRAM</a> -->
             </nav>
+            <div class="news fade-in two">
+                <h3 style="margin-top: 0%;">公告</h1>本週禮拜四五六⋯鹽味干貝拉麵限定回歸！
+                    限量販售！
+                    感謝🙏！
+            </div>
             <div class="content">
                 <div class="title fade-in two">
                     <h1>麵五三屋台ラーメン</h1>
@@ -496,11 +518,6 @@
                     <li>30</li>
                     <li>31</li>
                 </ul>
-            </div>
-            <div class="news fade-in two">
-                <h3>公告</h1>本週禮拜四五六⋯鹽味干貝拉麵限定回歸！
-                    限量販售！
-                    感謝🙏！
             </div>
         </div>
         <div class="swiper-container swiper-container-horizontal fade-in three">
