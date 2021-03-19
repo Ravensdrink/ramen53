@@ -261,19 +261,20 @@
         }
 
         .swiper-slide {
-            text-align: center;
+            text-align: unset;
             font-size: 18px;
             height: 450px;
             flex-direction: column;
             padding: 0 10px;
             margin: auto;
+            overflow: auto;
 
 
             /* Center slide text vertically */
             display: -webkit-box;
             display: -ms-flexbox;
             display: -webkit-flex;
-            display: flex;
+            display: block;
             -webkit-box-pack: center;
             -ms-flex-pack: center;
             -webkit-justify-content: center;
@@ -382,6 +383,9 @@
             .swiper-slide {
                 padding: 7vh 0 0 4vw;
                 margin: 0;
+                display: flex;
+                text-align: center;
+                overflow: unset;
             }
 
             .swiper-pagination-bullet {
@@ -583,7 +587,21 @@
                     <h3 style="color: rgb(253, 74, 74);">燒鳥　　　　　 $38/串</h3>
                     <h5 style="color: rgb(253, 74, 74);">烤雞肉串　辣!!</h5>
                 </div>
-                <div class="swiper-slide swiper-slide-next">
+                <div class="swiper-slide swiper-slide-next pizza">
+                    <h3>瑪格莉特　　　 $250</h3>
+                    <p>蕃茄醬、羅勒、莫札瑞拉、大蒜…</p>
+                    <h3>鄉村　　　　　 $280</h3>
+                    <p>鹹豬肉、洋蔥、蔥、蕃茄醬、羅勒、莫札瑞拉、大蒜</p>
+                    <h3>夏威夷　　　　 $280</h3>
+                    <p>德國脆腸、洋蔥、鳳梨、蕃茄醬、羅勒、莫札瑞拉…</p>
+                    <h3>燒鳥　　　　　 $280</h3>
+                    <p>雞肉、洋蔥、青蔥、蕃茄醬、羅勒、莫札瑞拉…</p>
+                    <h3>章魚燒　　　　 $280</h3>
+                    <p>章魚丁、洋蔥、蔥花、莫札瑞拉、美乃滋、哇撒米、柴魚片</p>
+                    <h3>橙香燒鳥　　　 $280</h3>
+                    <p>雞肉、橙皮絲、洋蔥、青蔥、蕃茄醬、羅勒、莫札瑞拉</p>
+                    <h3>海鮮星星餃　　 $330</h3>
+                    <p>蝦仁、章魚丁、蔥、洋蔥、莫札瑞拉、海苔粉</p>
                     <h3>瑪格莉特　　　 $250</h3>
                     <p>蕃茄醬、羅勒、莫札瑞拉、大蒜…</p>
                     <h3>鄉村　　　　　 $280</h3>
