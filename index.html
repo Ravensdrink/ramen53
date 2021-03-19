@@ -125,6 +125,11 @@
             background-color: rgba(0, 0, 0, 0.556);
             height: 100%;
             padding: 0 5%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
         }
 
         .content {
@@ -132,7 +137,7 @@
         }
 
         .logo {
-            margin: 4vh 0;
+            margin: 5% 0;
             display: flex;
             justify-content: center;
         }
@@ -141,6 +146,7 @@
             width: 230px;
             height: 290px;
             font-weight: 700;
+            margin-top: 5%;
         }
 
         .calender li {
@@ -200,15 +206,16 @@
         }
 
         .nav {
-            margin: 5% 0;
+            margin: 10% 0;
             font-size: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
+            flex-direction: column;
         }
 
         .nav a {
-            margin: 5% 0;
+            margin: 10% 0;
         }
 
         .nav p {
@@ -226,14 +233,31 @@
             width: 80px;
             height: min-content;
             font-size: 24px;
-            background: none;
+            background-color: rgba(0, 0, 0, 0.556);
+            border-radius: 10px;
+            padding: 10px 0;
+
+        }
+
+        .swiper-pagination {
+            display: flex;
+            flex-direction: column;
         }
 
         .swiper-container-horizontal>.swiper-pagination-bullets,
         .swiper-pagination-custom,
         .swiper-pagination-fraction {
             bottom: unset;
-            top: 40px;
+            top: 5%;
+            right: 5%;
+        }
+
+        .swiper-container-horizontal>.swiper-pagination-bullets,
+        .swiper-pagination-custom,
+        .swiper-pagination-fraction {
+            position: fixed;
+            width: unset;
+            left: unset;
         }
 
         .swiper-slide {
@@ -291,26 +315,31 @@
                 background-color: unset;
             }
 
+            .left {
+                padding: 5%;
+            }
+
             .logo {
                 margin: 2vh 0;
                 display: block;
             }
 
             .nav {
-                position: absolute;
+
                 display: flex;
-                left: 56vw;
-                top: 4vh;
                 margin: 0;
+                flex-direction: unset;
+                margin: 0 0;
             }
 
             .news {
                 display: inline-block;
                 position: unset;
+                margin-top: 10%;
             }
 
             .nav a {
-                margin: 20px 0 0 20px;
+                margin: 0 20px;
                 justify-content: flex-end;
             }
 
@@ -339,6 +368,7 @@
                 padding: 5% 0;
                 background: rgba(41, 36, 36, 0.556);
                 border-radius: 5%;
+                margin-top: 10px;
             }
 
             .swiper-pagination-bullet-active {
@@ -354,11 +384,21 @@
                 margin: 0;
             }
 
+            .swiper-pagination-bullet {
+                border-radius: unset;
+                padding: unset;
+
+            }
+
             .swiper-container-horizontal>.swiper-pagination-bullets,
             .swiper-pagination-custom,
             .swiper-pagination-fraction {
                 bottom: unset;
                 top: unset;
+                width: 100%;
+                position: absolute;
+                display: block;
+                right: unset;
             }
         }
 
@@ -461,7 +501,7 @@
                     <pre>
 平日　18:00 ~21:00
 假日　17:00 ~21:00
-<a href="https://tinyurl.com/ybc7koaw">542 南投縣草屯鎮史館路397巷53號</a></pre>
+<a href="https://tinyurl.com/ybc7koaw">南投縣草屯鎮史館路397巷53號</a></pre>
                 </div>
             </div>
             <div class="calender fade-in three">
