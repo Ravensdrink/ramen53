@@ -48,7 +48,7 @@
         }
 
         .swiper-wrapper p {
-            width: 77%;
+            width: 80%;
             font-size: 10px;
             text-align: left;
             margin-bottom: 10px;
@@ -269,6 +269,8 @@
             margin: auto;
             overflow: auto;
 
+            -ms-overflow-style: none;
+            overflow: -moz-scrollbars-none;
 
             /* Center slide text vertically */
             display: -webkit-box;
@@ -283,6 +285,10 @@
             -ms-flex-align: center;
             -webkit-align-items: center;
             align-items: flex-start;
+        }
+
+        .swiper-slide::-webkit-scrollbar {
+            width: 0 !important
         }
 
         @media screen and (max-width: 660px) {
@@ -587,7 +593,7 @@
                     <h3 style="color: rgb(253, 74, 74);">燒鳥　　　　　 $38/串</h3>
                     <h5 style="color: rgb(253, 74, 74);">烤雞肉串　辣!!</h5>
                 </div>
-                <div class="swiper-slide swiper-slide-next pizza">
+                <div class="swiper-slide swiper-slide-next">
                     <h3>瑪格莉特　　　 $250</h3>
                     <p>蕃茄醬、羅勒、莫札瑞拉、大蒜…</p>
                     <h3>鄉村　　　　　 $280</h3>
