@@ -92,7 +92,6 @@
         }
 
         .bg {
-            display: flex;
             height: 100%;
             width: 100%;
             background-color: black;
@@ -140,6 +139,10 @@
             margin: 5% 0;
             display: flex;
             justify-content: center;
+        }
+
+        #menu {
+            display: none;
         }
 
         .calender {
@@ -298,7 +301,7 @@
 
             .rwd-center {
                 margin: auto;
-                padding: 2vh 0;
+                padding: 12vh 0 4vh 0;
                 display: grid;
                 width: 300px;
                 height: max-content;
@@ -316,46 +319,47 @@
                 margin: auto;
             }
 
-            .logo,
             .left {
-                position: unset;
                 background-color: unset;
             }
 
-            .left {
-                padding: 5%;
-            }
-
-            .logo {
-                margin: 2vh 0;
-                display: block;
+            .rwd-top {
+                height: 10%;
+                width: 100%;
+                position: fixed;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                top: 0%;
+                z-index: 99;
+                background-color: rgba(188, 0, 0, 0.7);
             }
 
             .nav {
+                flex-direction: row;
+                margin: 0 2vw 0 0;
+            }
 
-                display: flex;
-                margin: 0;
-                flex-direction: unset;
-                margin: 0 0;
+            .nav a {
+                margin: 0 6vw 0 0;
+            }
+
+            .nav i {
+                font-size: x-large;
+                color: white;
+            }
+
+            .nav p {
+                display: none;
             }
 
             .news {
                 display: inline-block;
                 position: unset;
-                margin-top: 10%;
             }
 
-            .nav a {
-                margin: 0 20px;
-                justify-content: flex-end;
-            }
-
-            .nav i {
-                font-size: xx-large;
-            }
-
-            .nav p {
-                display: none;
+            #menu {
+                display: block;
             }
 
             .title h1 {
@@ -365,7 +369,6 @@
             .footer,
             .footer pre {
                 padding-left: unset;
-                font-size: 16px;
             }
 
             .swiper-container {
@@ -374,8 +377,7 @@
                 height: auto;
                 padding: 5% 0;
                 background: rgba(41, 36, 36, 0.556);
-                border-radius: 5%;
-                margin-top: 10px;
+                border-radius: 10px;
             }
 
             .swiper-pagination-bullet-active {
@@ -480,23 +482,24 @@
 </head>
 
 <body>
-    <div class="bg"></div>
+    <div class="bg" id="top"></div>
     <div class="rwd-center">
         <div class="left">
-            <div class="logo fade-in one"><img src="img/logo.gif" alt="">
-            </div>
-            <nav class="nav fade-in two" id="link">
-                <a href="https://www.facebook.com/53ramen"><i class="fab fa-facebook-square"
-                        style="color: #7dacfd;"></i>
-                    <p>FACEBOOK</p>
-                </a>
-                <a href="tel:0933581872"><i class="fas fa-phone" style="color: rgb(255, 74, 74);"></i>
-                    <p>0933 581 872</p>
-                </a>
-                <!-- <a href=""><i class="fab fa-instagram" style="color: #fc7aa5;">
+            <div class="rwd-top">
+                <a class="logo fade-in one" href="#top"><img src="img/logo.gif" alt=""></a>
+                <nav class="nav fade-in two" id="link">
+                    <a href="#menu"><i class="fas fa-utensils"></i></a>
+                    <a href="https://www.facebook.com/53ramen"><i class="fab fa-facebook-square"></i>
+                        <p>FACEBOOK</p>
+                    </a>
+                    <a href="tel:0933581872"><i class="fas fa-phone"></i>
+                        <p>0933 581 872</p>
+                    </a>
+                    <!-- <a href=""><i class="fab fa-instagram" style="color: #fc7aa5;">
                  <a href=""><i class="fab fa-line" style="color: #05d805;"></i> LINE　</a>
                 </i> INSTAGRAM</a> -->
-            </nav>
+                </nav>
+            </div>
             <div class="news fade-in two">
                 <h3 style="margin-top: 0%;">公告</h1>本週禮拜四五六⋯鹽味干貝拉麵限定回歸！
                     限量販售！
@@ -570,7 +573,7 @@
                 </ul>
             </div>
         </div>
-        <div class="swiper-container swiper-container-horizontal fade-in three">
+        <div class="swiper-container swiper-container-horizontal fade-in three" id="menu">
             <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets">
                 <span class="swiper-pagination-bullet swiper-pagination-bullet-active">拉麵
                 </span>
