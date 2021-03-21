@@ -31,7 +31,6 @@
             display: flex;
             color: white;
             min-height: 100vh;
-            width: 100vw;
             font-family: 'Noto Serif TC', 'Varela Round', sans-serif;
         }
 
@@ -136,12 +135,12 @@
         }
 
         .logo {
-            margin: 5% 0;
+            margin: 5%;
             display: flex;
             justify-content: center;
         }
 
-        #menu {
+        .menuicon {
             display: none;
         }
 
@@ -209,7 +208,6 @@
         }
 
         .nav {
-            margin: 10% 0;
             font-size: 12px;
             display: flex;
             align-items: center;
@@ -335,9 +333,14 @@
                 background-color: rgba(188, 0, 0, 0.7);
             }
 
+            .logo {
+                margin: 1.7vh 7vw;
+                display: flex;
+                justify-content: unset;
+            }
+
             .nav {
                 flex-direction: row;
-                margin: 0 2vw 0 0;
             }
 
             .nav a {
@@ -358,7 +361,7 @@
                 position: unset;
             }
 
-            #menu {
+            .menuicon {
                 display: block;
             }
 
@@ -488,7 +491,7 @@
             <div class="rwd-top">
                 <a class="logo fade-in one" href="#top"><img src="img/logo.gif" alt=""></a>
                 <nav class="nav fade-in two" id="link">
-                    <a href="#menu"><i class="fas fa-utensils"></i></a>
+                    <a href="#menu"><i class="menuicon fas fa-utensils"></i></a>
                     <a href="https://www.facebook.com/53ramen"><i class="fab fa-facebook-square"></i>
                         <p>FACEBOOK</p>
                     </a>
