@@ -485,8 +485,8 @@
 </head>
 
 <body>
-    <div class="bg" id="top"></div>
-    <div class="rwd-center">
+    <div class="bg"></div>
+    <div class="rwd-center" id="top">
         <div class="left">
             <div class="rwd-top">
                 <a class="logo fade-in one" href="#top"><img src="img/logo.gif" alt=""></a>
@@ -498,6 +498,8 @@
                     <a href="tel:0933581872"><i class="fas fa-phone"></i>
                         <p>0933 581 872</p>
                     </a>
+
+
                     <!-- <a href=""><i class="fab fa-instagram" style="color: #fc7aa5;">
                  <a href=""><i class="fab fa-line" style="color: #05d805;"></i> LINE　</a>
                 </i> INSTAGRAM</a> -->
@@ -633,9 +635,11 @@
         </div>
     </div>
     <script src="css.js/swiper-bundle.min.js"></script>
+    <script src="css.js/jquery-3.6.0.min.js"></script>
 
     <!-- Initialize Swiper -->
     <script>
+
         var swiper = new Swiper('.swiper-container', {
             pagination: {
                 el: '.swiper-pagination',
@@ -651,6 +655,15 @@
                 },
             },
         });
+
+        $("html,body,a").click(function (event) {
+            $("a").removeClass("selected");
+            $(this).addClass("selected")
+
+            var id = $(this).attr("href");
+            var y = $(id).offset().top;
+            $("html,body,a").animate({ scrollTop: y }, 1000);
+        })
     </script>
 </body>
 
