@@ -46,13 +46,6 @@
             display: inline;
         }
 
-        .swiper-wrapper p {
-            width: 80%;
-            font-size: 10px;
-            text-align: left;
-            margin-bottom: 10px;
-        }
-
         h1 {
             font-size: x-large;
             letter-spacing: 1px;
@@ -234,10 +227,16 @@
             width: 80px;
             height: min-content;
             font-size: 24px;
-            background-color: rgba(0, 0, 0, 0.556);
+            background: none;
             border-radius: 10px;
             padding: 10px 0;
 
+        }
+
+        .swiper-wrapper p {
+            font-size: 10px;
+            text-align: left;
+            margin-bottom: 10px;
         }
 
         .swiper-pagination {
@@ -265,9 +264,10 @@
             text-align: unset;
             font-size: 18px;
             height: 450px;
+            width: 80% !important;
             flex-direction: column;
-            padding: 0 10px;
             margin: auto;
+            padding: 0 10%;
             overflow: auto;
 
             -ms-overflow-style: none;
@@ -292,6 +292,10 @@
             width: 0 !important
         }
 
+        #sweet {
+            color: rgb(248,195,205);
+        }
+
         @media screen and (max-width: 660px) {
             .bg {
                 opacity: 70%;
@@ -300,11 +304,11 @@
             .rwd-center {
                 margin: auto;
                 padding: 12vh 0 4vh 0;
-                display: grid;
+                display: flex;
                 width: 300px;
                 height: max-content;
                 justify-content: center;
-
+                flex-direction: column;
             }
 
             .calender,
@@ -379,7 +383,7 @@
                 width: 100%;
                 height: auto;
                 padding: 5% 0;
-                background: rgba(41, 36, 36, 0.556);
+                background: rgba(46, 46, 46, 0.556);
                 border-radius: 10px;
             }
 
@@ -392,10 +396,8 @@
             }
 
             .swiper-slide {
-                padding: 7vh 0 0 4vw;
-                margin: 0;
+                padding: 15% 10%;
                 display: flex;
-                text-align: center;
                 overflow: unset;
             }
 
@@ -585,21 +587,21 @@
                 <span class="swiper-pagination-bullet">披薩</span>
             </div>
             <div class="swiper-wrapper">
-                <div class="swiper-slide swiper-slide-activ">
-                    <h3>豚骨白湯拉麵　　 $200</h3>
-                    <h5>とんこつ ラーメン　鹹度:★★</h5>
-                    <h3 style="color: rgb(253, 135, 135);">赤湯味噌拉麵　　 $200</h3>
-                    <h5 style="color: rgb(253, 135, 135);">辛味噌 ラーメン　鹹度:★★★　微辣!</h5>
-                    <h3 style="color: rgb(253, 74, 74);">辛子拉麵　　　　 $210</h3>
-                    <h5 style="color: rgb(253, 74, 74);">辛 ラーメン　　鹹度:★★★★　辣!!</h5>
-                    <h3>櫻花蝦拉麵　　　 $230</h3>
-                    <h5>周三限定　　　　 　鹹度:★★</h5>
-                    <h3 style="color: rgb(0, 225, 255);">鹽味干貝拉麵　　 $250</h3>
-                    <h5 style="color: rgb(0, 225, 255);">周四五六限定 　　　鹹度:★★</h5>
-                    <h3>明太子白飯　　　　$60</h3>
-                    <h5>(加入拉麵湯中食用)</h5>
-                    <h3 style="color: rgb(253, 74, 74);">燒鳥　　　　　 $38/串</h3>
-                    <h5 style="color: rgb(253, 74, 74);">烤雞肉串　辣!!</h5>
+                <div class="swiper-slide" id="ramen">
+                    <h3>豚骨白湯拉麵　 $200</h3>
+                    <p>とんこつ ラーメン　鹹度:★★</p>
+                    <h3 style="color: rgb(253, 135, 135);">赤湯味噌拉麵　 $200</h3>
+                    <p style="color: rgb(253, 135, 135);">辛味噌 ラーメン　鹹度:★★★　微辣!</p>
+                    <h3 style="color: rgb(253, 74, 74);">辛子拉麵　　　 $210</h3>
+                    <p style="color: rgb(253, 74, 74);">辛 ラーメン　鹹度:★★★★　辣!!</p>
+                    <h3>櫻花蝦拉麵　　 $230</h3>
+                    <p>周三限定　鹹度:★★</p>
+                    <h3 style="color: rgb(0, 225, 255);">鹽味干貝拉麵　 $250</h3>
+                    <p style="color: rgb(0, 225, 255);">周四五六限定　鹹度:★★</p>
+                    <h3>明太子白飯　　　$60</h3>
+                    <p>(加入拉麵湯中食用)</p>
+                    <h3 style="color: rgb(253, 74, 74);">燒鳥　　　　 $38/串</h3>
+                    <p style="color: rgb(253, 74, 74);">烤雞肉串　辣!!</p>
                 </div>
                 <div class="swiper-slide swiper-slide-next">
                     <h3>瑪格莉特　　　 $250</h3>
@@ -616,20 +618,45 @@
                     <p>雞肉、橙皮絲、洋蔥、青蔥、蕃茄醬、羅勒、莫札瑞拉</p>
                     <h3>海鮮星星餃　　 $330</h3>
                     <p>蝦仁、章魚丁、蔥、洋蔥、莫札瑞拉、海苔粉</p>
-                    <h3>瑪格莉特　　　 $250</h3>
-                    <p>蕃茄醬、羅勒、莫札瑞拉、大蒜…</p>
-                    <h3>鄉村　　　　　 $280</h3>
-                    <p>鹹豬肉、洋蔥、蔥、蕃茄醬、羅勒、莫札瑞拉、大蒜</p>
-                    <h3>夏威夷　　　　 $280</h3>
-                    <p>德國脆腸、洋蔥、鳳梨、蕃茄醬、羅勒、莫札瑞拉…</p>
-                    <h3>燒鳥　　　　　 $280</h3>
-                    <p>雞肉、洋蔥、青蔥、蕃茄醬、羅勒、莫札瑞拉…</p>
-                    <h3>章魚燒　　　　 $280</h3>
-                    <p>章魚丁、洋蔥、蔥花、莫札瑞拉、美乃滋、哇撒米、柴魚片</p>
-                    <h3>橙香燒鳥　　　 $280</h3>
-                    <p>雞肉、橙皮絲、洋蔥、青蔥、蕃茄醬、羅勒、莫札瑞拉</p>
-                    <h3>海鮮星星餃　　 $330</h3>
-                    <p>蝦仁、章魚丁、蔥、洋蔥、莫札瑞拉、海苔粉</p>
+                    <h3>櫻花蝦　　　 　$300</h3>
+                    <p>櫻花蝦、蝦仁、美乃滋、蔥、洋蔥、莫札瑞拉…</p>
+                    <h3>大阪燒　　　　 $280</h3>
+                    <p>叉燒肉、高麗菜、大阪燒醬、洋蔥、蔥、美乃滋、莫札瑞拉</p>
+                    <h3>蔬菜燒(蛋奶素) $280</h3>
+                    <p>高麗菜、豆芽、大阪燒醬、美乃滋、莫札瑞拉…</p>
+                    <h3>蒜香叉燒　　　 $280</h3>
+                    <p>大蒜、叉燒肉、高麗菜、洋蔥、蔥、美乃滋、七味粉、芝蔴</p>
+                    <h3>起司共和國　　 $280</h3>
+                    <p>莫札瑞拉、高達起司、切打起司、帕瑪森、番茄醬、羅勒</p>
+                    <h3>松露海鮮　　　 $350</h3>
+                    <p>松露醬、章魚丁、蝦仁、洋蔥、羅勒、古斯特起司</p>
+                    <div id="sweet">
+                        <h1 style="display: flex;margin: auto;">甜味</h1>
+                        <h3>香蕉煉乳　　　$280</h3>
+                        <p>(蛋奶素)</p>
+                        <P>香蕉、莫札瑞拉、北海道煉乳</P>
+                        <h3>香蕉巧克力　　$280</h3>
+                        <p>(蛋奶素)</p>
+                        <P>香蕉、榛果巧克力、莫札瑞拉</P>
+                        <h3>花生巧克力　　$280</h3>
+                        <p>(蛋奶素)</p>
+                        <P>花生醬、巧克力、莫札瑞拉</P>
+                        <h3>芋頭牛奶　　　$280</h3>
+                        <p>(蛋奶素)</p>
+                        <P>芋頭、紐西蘭牛奶、莫札瑞拉</P>
+                        <h3>肉桂糖星星餃　$320</h3>
+                        <p>(蛋奶素)</p>
+                        <P>巧克力、肉桂糖、莫札瑞拉…</P>
+                        <h3>蜂蜜丁星星餃　$320</h3>
+                        <p>(蛋奶素)</p>
+                        <P>蜂蜜丁、橙皮絲、香草糖、莫札瑞拉</P>
+                        <h3>草莓煉乳　　　$350</h3>
+                        <p>＊季節限定 & 酸甜　(蛋奶素)</p>
+                        <P>草莓、莫札瑞拉、草莓泥、北海道煉乳</P>
+                        <h3>草莓巧克力　　$350</h3>
+                        <p>＊季節限定　(蛋奶素)</p>
+                        <P>草莓、榛果巧克力、莫札瑞拉、草莓泥</P>
+                    </div>
                 </div>
             </div>
         </div>
@@ -662,7 +689,7 @@
 
             var id = $(this).attr("href");
             var y = $(id).offset().top;
-            $("html,body,a").animate({ scrollTop: y-80 }, 800);
+            $("html,body,a").animate({ scrollTop: y - 80 }, 800);
         })
     </script>
 </body>
