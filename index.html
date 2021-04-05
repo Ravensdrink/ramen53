@@ -108,8 +108,8 @@
             letter-spacing: 3px;
             color: white;
             position: fixed;
-            bottom: 5%;
-            right: 5%;
+            top: 6%;
+            right: 12%;
         }
 
         .left {
@@ -217,6 +217,25 @@
             margin: -4px 14px 0 5px;
         }
 
+        .video-container {
+            overflow: hidden;
+
+        }
+
+        .video-container iframe,
+        .video-container object,
+        .video-container embed {
+            position: fixed;
+            right: 5%;
+            bottom: 5%;
+            height: 20vmax;
+            width: 26vmax;
+            padding: 10px 2%;
+            background-color: black;
+            border-radius: 10px;
+
+        }
+
         .swiper-container {
             display: flex;
             background: rgba(41, 36, 36, 0.556);
@@ -294,7 +313,7 @@
         }
 
         #sweet {
-            color: rgb(248,195,205);
+            color: rgb(248, 195, 205);
         }
 
         @media screen and (max-width: 660px) {
@@ -365,6 +384,10 @@
             .news {
                 display: inline-block;
                 position: unset;
+            }
+
+            .video-container {
+                display: none;
             }
 
             .menuicon {
@@ -512,6 +535,12 @@
             <div class="news fade-in two">
                 <h3 style="margin-top: 0%;">公告</h1>4/2~4/5連假四天，五點開始營業，4/6.7日店休兩天。
             </div>
+            <div class="video-container"><iframe
+                    src="https://www.facebook.com/plugins/video.php?height=423&href=https%3A%2F%2Fwww.facebook.com%2F53ramen%2Fvideos%2F2600503890241755%2F&show_text=false&width=560"
+                    width="560" height="423" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                    allowfullscreen="true"
+                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                    allowFullScreen="true"></iframe></div>
             <div class="content">
                 <div class="title fade-in two">
                     <h1>麵五三屋台ラーメン</h1>
@@ -550,27 +579,32 @@
                     <li>3</li>
                     <li>4</li>
                     <li id="active">5</li>
-                    <li class="re">6<p>店休</p></li>
-                    <li class="re">7<p>店休</p></li>
+                    <li class="re">6<p>店休</p>
+                    </li>
+                    <li class="re">7<p>店休</p>
+                    </li>
                     <li>8</li>
                     <li>9</li>
                     <li>10</li>
                     <li>11</li>
-                    <li>12 <p>店休</p></li>
+                    <li>12 <p>店休</p>
+                    </li>
                     <li>13</li>
                     <li>14</li>
                     <li>15</li>
                     <li>16</li>
                     <li>17</li>
                     <li>18</li>
-                    <li>19 <p>店休</p></li>
+                    <li>19 <p>店休</p>
+                    </li>
                     <li>20</li>
                     <li>21</li>
                     <li>22</li>
                     <li>23</li>
                     <li>24</li>
                     <li>25</li>
-                    <li>26 <p>店休</p></li>
+                    <li>26 <p>店休</p>
+                    </li>
                     <li>27</li>
                     <li>28</li>
                     <li>29</li>
